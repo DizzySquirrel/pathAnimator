@@ -86,6 +86,10 @@ PathAnimator.prototype = {
         return this.path.getPointAtLength( this.len * percent/100 );
     },
 
+    pathLength : function(){
+        return this.path.getTotalLength();
+    },
+
     updatePath : function( path ){
         if( !this.path && path ){
             this.path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
